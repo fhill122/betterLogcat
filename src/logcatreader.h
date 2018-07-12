@@ -1,13 +1,14 @@
 #ifndef LOGCATREADER_H
 #define LOGCATREADER_H
 
-#include <string>
+#include <QProcess>
+#include <QString>
 
 class LogcatReader{
 
 private:
-    std::string adbPath;
-
+    QString adbPathAlternative;
+    QProcess adbProcess;
 public:
 
 
@@ -16,6 +17,8 @@ private:
 public:
     LogcatReader();
     ~LogcatReader();
+
+    void Start();
 
 };
 
